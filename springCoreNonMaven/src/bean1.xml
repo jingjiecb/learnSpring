@@ -18,5 +18,20 @@
 <!--    </bean>-->
 
     <!-- 4 使用p名称空间注入 -->
-    <bean id="user" class="top.claws.User" p:name="Claws"/>
+<!--    <bean id="user" class="top.claws.User" p:name="Claws"/>-->
+
+<!--    5 注入null空值-->
+<!--    <bean id="user" class="top.claws.User">-->
+<!--        <property name="name">-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    6 注入的属性值有特殊符号-->
+    <bean id="user" class="top.claws.User">
+<!--        <property name="name" value="&lt;Claws&gt;"></property>-->
+        <property name="name">
+            <value><![CDATA[<<Claws>>]]></value>
+        </property>
+    </bean>
 </beans>
