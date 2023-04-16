@@ -3,5 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="top.claws.User"></bean>
+    <!-- 1 配置User对象的创建 -->
+<!--    <bean id="user" class="top.claws.User"></bean>-->
+
+    <!-- set 方法注入属性 -->
+    <bean id="user" class="top.claws.User">
+        <property name="name" value="claws"/>
+    </bean>
 </beans>

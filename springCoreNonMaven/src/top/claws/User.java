@@ -7,10 +7,16 @@ package top.claws;
 public class User {
     private String name;
 
+    private int age;
+
     public User() {
         System.out.println("User 对象创建");
     }
-    public void add() {
-        System.out.println("Add...");
+    public void sayHello() {
+        System.out.println("Hello, I am " + name);
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -15,12 +15,11 @@ public class TestSpring5 {
     public void testUserAdd() {
         // 加载Spring配置文件
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
-
         System.out.println("xml 文件已加载");
 
         // 获得配置创建的对象
         User user = context.getBean("user", User.class);
         System.out.println(user);
-        user.add();
+        user.sayHello();
     }
 }
