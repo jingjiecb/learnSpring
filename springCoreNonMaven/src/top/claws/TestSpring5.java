@@ -20,6 +20,6 @@ public class TestSpring5 {
         // 获得配置创建的对象
         User user = context.getBean("user", User.class);
         System.out.println(user);
-        user.sayAge();
+        user.sayHello();
     }
 }
