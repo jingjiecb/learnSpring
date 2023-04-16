@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="emp" class="top.claws.bean.Employee">
+        <property name="name" value="Claws"></property>
+        <property name="department">
+<!--            通过内部Bean嵌套定义Bean（实际使用过程中还是外部Bean用的比较多，因为看的更加清晰）-->
+            <bean id="department" class="top.claws.bean.Department">
+                <property name="name" value="开发部"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>
