@@ -7,7 +7,12 @@
 <!--    <bean id="user" class="top.claws.User"></bean>-->
 
     <!-- set 方法注入属性 -->
+<!--    <bean id="user" class="top.claws.User">-->
+<!--        <property name="name" value="claws"/>-->
+<!--    </bean>-->
+
+    <!-- 3 使用有参构造函数注入属性 -->
     <bean id="user" class="top.claws.User">
-        <property name="name" value="claws"/>
+        <constructor-arg name="age" value="13"/>
     </bean>
 </beans>

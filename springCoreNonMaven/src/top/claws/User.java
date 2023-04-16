@@ -12,8 +12,17 @@ public class User {
     public User() {
         System.out.println("User 对象创建");
     }
+
+    public User(int age) {
+        this.age = age;
+    }
+
     public void sayHello() {
         System.out.println("Hello, I am " + name);
+    }
+
+    public void sayAge() {
+        System.out.println("Hello, I am " + age + " years old.");
     }
 
     public void setName(String name) {
