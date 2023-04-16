@@ -7,6 +7,10 @@
     <groupId>top.claws</groupId>
     <artifactId>learnSpring</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>springMavenBeginner</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
