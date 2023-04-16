@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emp" class="top.claws.bean.Employee">
+        <property name="name" value="Claws"></property>
+        <property name="department" ref="dept"></property>
+<!--        外部Bean + 级联赋值-->
+        <property name="department.name" value="清洁部"></property>
+    </bean>
+
+    <bean id="dept" class="top.claws.bean.Department">
+        <property name="name" value="运维部"></property>
+    </bean>
+</beans>

@@ -12,7 +12,7 @@ import top.claws.bean.Employee;
 public class TestEmployee {
     @Test
     public void testEmployee() {
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean3.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
         Employee emp = context.getBean("emp", Employee.class);
         emp.selfIntroduce();
     }
