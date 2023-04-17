@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 1 配置User对象的创建 -->
+<!--    <bean id="user" class="top.claws.User"></bean>-->
+
+    <!-- set 方法注入属性 -->
+<!--    <bean id="user" class="top.claws.User">-->
+<!--        <property name="name" value="claws"/>-->
+<!--    </bean>-->
+
+    <!-- 3 使用有参构造函数注入属性 -->
+<!--    <bean id="user" class="top.claws.User">-->
+<!--        <constructor-arg name="age" value="13"/>-->
+<!--    </bean>-->
+
+    <!-- 4 使用p名称空间注入 -->
+<!--    <bean id="user" class="top.claws.User" p:name="Claws"/>-->
+
+<!--    5 注入null空值-->
+<!--    <bean id="user" class="top.claws.User">-->
+<!--        <property name="name">-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    6 注入的属性值有特殊符号-->
+    <bean id="user" class="top.claws.User">
+<!--        <property name="name" value="&lt;Claws&gt;"></property>-->
+        <property name="name">
+            <value><![CDATA[<<Claws>>]]></value>
+        </property>
+    </bean>
+</beans>
